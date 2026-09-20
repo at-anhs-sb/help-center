@@ -676,10 +676,10 @@ footer .accent{
     </div>
 
     <div class="audio">
-      <audio autoplay loop controls>
-        <source src="https://github.com/yangyanghappy88/hunter-music-files/raw/refs/heads/main/STRUCT%20(Slowed)%204.mp3" type="audio/mpeg">
-      </audio>
-    </div>
+  <audio id="bgMusic" autoplay loop controls preload="auto">
+    <source src="https://github.com/yangyanghappy88/hunter-music-files/raw/refs/heads/main/STRUCT%20(Slowed)%204.mp3" type="audio/mpeg">
+  </audio>
+</div>
 
     <div class="status">
       <div>
@@ -872,6 +872,28 @@ function createParticles(){
     });
   }
 }
+
+async function startMusic() {
+  try {
+    await bgMusic.play();
+    console.log("Music started.");
+  } catch (error) {
+    console.log("Autoplay was blocked. Waiting for user interaction.");
+  }
+}
+
+// Try immediately when the page loads.
+window.addEventListener("load", startMusic);
+
+// If the browser blocks autoplay, start on the first interaction.
+const startOnInteraction = () => {
+  startMusic();
+};
+
+document.addEventListener("click", startOnInteraction, { once: true });
+document.addEventListener("touchstart", startOnInteraction, { once: true });
+document.addEventListener("keydown", startOnInteraction, { once: true });
+</script>
 
 function animate(){
   ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
