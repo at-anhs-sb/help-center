@@ -19,7 +19,9 @@
   --shadow:0 25px 70px rgba(0,0,0,.7);
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 html{
   scroll-behavior:smooth;
@@ -596,8 +598,15 @@ footer .accent{
 }
 
 @keyframes pulse{
-  0%,100%{opacity:.45;transform:scale(.8)}
-  50%{opacity:1;transform:scale(1.15)}
+  0%,100%{
+    opacity:.45;
+    transform:scale(.8);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.15);
+  }
 }
 
 @media(max-width:620px){
@@ -653,213 +662,317 @@ footer .accent{
 }
 </style>
 </head>
+
 <body>
+
 <canvas id="particles"></canvas>
 
 <div class="shell">
-  <header>
-    <div class="top-line"></div>
-    <span class="corner tl"></span>
-    <span class="corner tr"></span>
-    <span class="corner bl"></span>
-    <span class="corner br"></span>
 
-    <div class="badge"><i></i> CHESS.COM // HELP CENTER</div>
-    <h1>Club Help Center</h1>
-    <div class="subtitle">SUPPORT // GUIDELINES // INFORMATION // COMMUNITY</div>
+<header>
+  <div class="top-line"></div>
 
-    <div class="header-meta">
-      <div class="meta">NODE <span>01</span></div>
-      <div class="meta">ACCESS <span>PUBLIC</span></div>
-      <div class="meta">SECURE <span>YES</span></div>
-      <div class="meta">SYSTEM <span>ONLINE</span></div>
+  <span class="corner tl"></span>
+  <span class="corner tr"></span>
+  <span class="corner bl"></span>
+  <span class="corner br"></span>
+
+  <div class="badge">
+    <i></i> CHESS.COM // HELP CENTER
+  </div>
+
+  <h1>Club Help Center</h1>
+
+  <div class="subtitle">
+    SUPPORT // GUIDELINES // INFORMATION // COMMUNITY
+  </div>
+
+  <div class="header-meta">
+    <div class="meta">NODE <span>01</span></div>
+    <div class="meta">ACCESS <span>PUBLIC</span></div>
+    <div class="meta">SECURE <span>YES</span></div>
+    <div class="meta">SYSTEM <span>ONLINE</span></div>
+  </div>
+
+  <div class="audio">
+    <audio
+      id="bgMusic"
+      autoplay
+      loop
+      controls
+      preload="auto"
+      playsinline>
+      <source
+        src="https://github.com/yangyanghappy88/hunter-music-files/raw/refs/heads/main/STRUCT%20(Slowed)%204.mp3"
+        type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="status">
+    <div>
+      <div class="status-label">HELP CENTER STATUS</div>
+      <div class="status-sub">ALL SYSTEMS // OPERATIONAL</div>
     </div>
 
-    <div class="audio">
-  <audio id="bgMusic" autoplay loop controls preload="auto">
-    <source src="https://github.com/yangyanghappy88/hunter-music-files/raw/refs/heads/main/STRUCT%20(Slowed)%204.mp3" type="audio/mpeg">
-  </audio>
+    <div class="online">ONLINE</div>
+  </div>
+</header>
+
+<main>
+
+<section class="reveal" id="welcome">
+  <div class="section-head">
+    <span class="section-number">01</span>
+    <span>WELCOME</span>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">WELCOME TO THE HELP CENTER</div>
+
+    <p>
+      Need help with the club? You're in the right place. This center contains
+      the basic rules, community guidelines, and useful information for keeping
+      the club organized and enjoyable.
+    </p>
+
+    <div class="tip">
+      TIP // Read the rules before posting, chatting, or submitting requests.
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="rules">
+  <div class="section-head">
+    <span class="section-number">02</span>
+    <span>RULES &amp; GUIDELINES</span>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="rules">
+
+    <article class="rule">
+      <div class="rule-code">01 // RESPECT</div>
+      <h3>RESPECT EVERY MEMBER</h3>
+      <p>
+        Treat every member with respect. No harassment, discrimination,
+        personal attacks, or unnecessary hostility.
+      </p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-code">02 // KEEP IT CLEAN</div>
+      <h3>KEEP DISCUSSIONS CLEAN</h3>
+      <p>
+        Keep discussions appropriate for the club. Avoid spam, flooding,
+        excessive advertising, and disruptive behavior.
+      </p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-code">03 // CHESS FAIR PLAY</div>
+      <h3>PLAY FAIR</h3>
+      <p>
+        Follow Chess.com's fair-play rules. Do not encourage cheating,
+        engine abuse, account sharing, or other unfair play.
+      </p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-code">04 // NO DRAMA</div>
+      <h3>HANDLE DISAGREEMENTS CALMLY</h3>
+      <p>
+        Take disagreements calmly. If an issue cannot be resolved,
+        contact the owner instead of turning it into public drama.
+      </p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-code">05 // STAY ON TOPIC</div>
+      <h3>KEEP THINGS RELEVANT</h3>
+      <p>
+        Keep help requests and club discussions relevant. Use the appropriate
+        area when one is available.
+      </p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-code">06 // COMMON SENSE</div>
+      <h3>USE COMMON SENSE</h3>
+      <p>
+        Do not exploit loopholes in the rules. Staff may act against behavior
+        that clearly harms the club or its members.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="reveal" id="help">
+  <div class="section-head">
+    <span class="section-number">03</span>
+    <span>HOW TO GET HELP</span>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="panel">
+
+    <div class="help-grid">
+
+      <div class="help-step">
+        <div class="step-letter">A</div>
+
+        <div>
+          <h3>DESCRIBE THE ISSUE</h3>
+          <p>Explain what happened and provide relevant details.</p>
+        </div>
+      </div>
+
+      <div class="help-step">
+        <div class="step-letter">B</div>
+
+        <div>
+          <h3>BE PATIENT</h3>
+          <p>Allow staff time to review your question or concern.</p>
+        </div>
+      </div>
+
+      <div class="help-step">
+        <div class="step-letter">C</div>
+
+        <div>
+          <h3>CONTACT THE OWNER</h3>
+          <p>
+            For serious issues or unresolved problems, contact the club owner below.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="owner">
+  <div class="section-head">
+    <span class="section-number">04</span>
+    <span>CLUB OWNER</span>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="panel owner">
+
+    <div class="owner-left">
+      <div class="owner-tag">PRIMARY ADMINISTRATOR</div>
+
+      <a
+        class="owner-name"
+        href="https://www.chess.com/member/iks-itsuko"
+        target="_blank"
+        rel="noopener noreferrer">
+        IKS-ITSUKO
+      </a>
+
+      <div class="owner-sub">
+        CLUB OWNER // HELP CENTER ADMIN
+      </div>
+    </div>
+
+    <div class="verified">
+      OWNER // VERIFIED
+    </div>
+
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-head">
+    <span class="section-number">05</span>
+    <span>QUICK ACCESS</span>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="quick">
+
+    <button class="quick-btn" data-target="welcome">
+      <div class="quick-icon">↑</div>
+      <div class="quick-label">TOP</div>
+    </button>
+
+    <button class="quick-btn" data-target="rules">
+      <div class="quick-icon">R</div>
+      <div class="quick-label">RULES</div>
+    </button>
+
+    <button class="quick-btn" data-target="owner">
+      <div class="quick-icon">ID</div>
+      <div class="quick-label">OWNER</div>
+    </button>
+
+  </div>
+</section>
+
+<div class="members reveal">
+  <iframe
+    src="https://at-anhs-sb.github.io/org-members/"
+    loading="lazy"
+    title="Club Members">
+  </iframe>
 </div>
 
-    <div class="status">
-      <div>
-        <div class="status-label">HELP CENTER STATUS</div>
-        <div class="status-sub">ALL SYSTEMS // OPERATIONAL</div>
-      </div>
-      <div class="online">ONLINE</div>
-    </div>
-  </header>
+</main>
 
-  <main>
-    <section class="reveal" id="welcome">
-      <div class="section-head">
-        <span class="section-number">01</span>
-        <span>WELCOME</span>
-        <span class="section-line"></span>
-      </div>
+<footer>
+  <div>
+    HELP CENTER
+    <span class="accent">//</span>
+    CHESS COMMUNITY
+    <span class="accent">//</span>
+    ONLINE
+  </div>
 
-      <div class="panel">
-        <div class="panel-title">WELCOME TO THE HELP CENTER</div>
-        <p>Need help with the club? You're in the right place. This center contains the basic rules, community guidelines, and useful information for keeping the club organized and enjoyable.</p>
-        <div class="tip">TIP // Read the rules before posting, chatting, or submitting requests.</div>
-      </div>
-    </section>
+  <div class="footer-status">
+    STATUS: READY TO ASSIST
+  </div>
 
-    <section class="reveal" id="rules">
-      <div class="section-head">
-        <span class="section-number">02</span>
-        <span>RULES &amp; GUIDELINES</span>
-        <span class="section-line"></span>
-      </div>
+  <div class="footer-status">
+    KEEP IT FRIENDLY. PLAY FAIR. ASK FOR HELP WHEN NEEDED.
+  </div>
+</footer>
 
-      <div class="rules">
-        <article class="rule">
-          <div class="rule-code">01 // RESPECT</div>
-          <h3>RESPECT EVERY MEMBER</h3>
-          <p>Treat every member with respect. No harassment, discrimination, personal attacks, or unnecessary hostility.</p>
-        </article>
-
-        <article class="rule">
-          <div class="rule-code">02 // KEEP IT CLEAN</div>
-          <h3>KEEP DISCUSSIONS CLEAN</h3>
-          <p>Keep discussions appropriate for the club. Avoid spam, flooding, excessive advertising, and disruptive behavior.</p>
-        </article>
-
-        <article class="rule">
-          <div class="rule-code">03 // CHESS FAIR PLAY</div>
-          <h3>PLAY FAIR</h3>
-          <p>Follow Chess.com's fair-play rules. Do not encourage cheating, engine abuse, account sharing, or other unfair play.</p>
-        </article>
-
-        <article class="rule">
-          <div class="rule-code">04 // NO DRAMA</div>
-          <h3>HANDLE DISAGREEMENTS CALMLY</h3>
-          <p>Take disagreements calmly. If an issue cannot be resolved, contact the owner instead of turning it into public drama.</p>
-        </article>
-
-        <article class="rule">
-          <div class="rule-code">05 // STAY ON TOPIC</div>
-          <h3>KEEP THINGS RELEVANT</h3>
-          <p>Keep help requests and club discussions relevant. Use the appropriate area when one is available.</p>
-        </article>
-
-        <article class="rule">
-          <div class="rule-code">06 // COMMON SENSE</div>
-          <h3>USE COMMON SENSE</h3>
-          <p>Do not exploit loopholes in the rules. Staff may act against behavior that clearly harms the club or its members.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="reveal" id="help">
-      <div class="section-head">
-        <span class="section-number">03</span>
-        <span>HOW TO GET HELP</span>
-        <span class="section-line"></span>
-      </div>
-
-      <div class="panel">
-        <div class="help-grid">
-          <div class="help-step">
-            <div class="step-letter">A</div>
-            <div>
-              <h3>DESCRIBE THE ISSUE</h3>
-              <p>Explain what happened and provide relevant details.</p>
-            </div>
-          </div>
-
-          <div class="help-step">
-            <div class="step-letter">B</div>
-            <div>
-              <h3>BE PATIENT</h3>
-              <p>Allow staff time to review your question or concern.</p>
-            </div>
-          </div>
-
-          <div class="help-step">
-            <div class="step-letter">C</div>
-            <div>
-              <h3>CONTACT THE OWNER</h3>
-              <p>For serious issues or unresolved problems, contact the club owner below.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reveal" id="owner">
-      <div class="section-head">
-        <span class="section-number">04</span>
-        <span>CLUB OWNER</span>
-        <span class="section-line"></span>
-      </div>
-
-      <div class="panel owner">
-        <div class="owner-left">
-          <div class="owner-tag">PRIMARY ADMINISTRATOR</div>
-          <a class="owner-name" href="https://www.chess.com/member/iks-itsuko" target="_blank" rel="noopener noreferrer">IKS-ITSUKO</a>
-          <div class="owner-sub">CLUB OWNER // HELP CENTER ADMIN</div>
-        </div>
-        <div class="verified">OWNER // VERIFIED</div>
-      </div>
-    </section>
-
-    <section class="reveal">
-      <div class="section-head">
-        <span class="section-number">05</span>
-        <span>QUICK ACCESS</span>
-        <span class="section-line"></span>
-      </div>
-
-      <div class="quick">
-        <button class="quick-btn" data-target="welcome">
-          <div class="quick-icon">↑</div>
-          <div class="quick-label">TOP</div>
-        </button>
-
-        <button class="quick-btn" data-target="rules">
-          <div class="quick-icon">R</div>
-          <div class="quick-label">RULES</div>
-        </button>
-
-        <button class="quick-btn" data-target="owner">
-          <div class="quick-icon">ID</div>
-          <div class="quick-label">OWNER</div>
-        </button>
-      </div>
-    </section>
-
-    <div class="members reveal">
-      <iframe src="https://at-anhs-sb.github.io/org-members/" loading="lazy" title="Club Members"></iframe>
-    </div>
-  </main>
-
-  <footer>
-    <div>
-      HELP CENTER <span class="accent">//</span> CHESS COMMUNITY <span class="accent">//</span> ONLINE
-    </div>
-    <div class="footer-status">STATUS: READY TO ASSIST</div>
-    <div class="footer-status">KEEP IT FRIENDLY. PLAY FAIR. ASK FOR HELP WHEN NEEDED.</div>
-  </footer>
 </div>
 
 <script>
 const canvas=document.getElementById("particles");
 const ctx=canvas.getContext("2d");
+
+const bgMusic=document.getElementById("bgMusic");
+
 let particles=[];
-let width,height;
+let width;
+let height;
 
 function resize(){
-  width=canvas.width=window.innerWidth*devicePixelRatio;
-  height=canvas.height=window.innerHeight*devicePixelRatio;
-  canvas.style.width=window.innerWidth+"px";
-  canvas.style.height=window.innerHeight+"px";
-  ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+  const dpr=window.devicePixelRatio||1;
+
+  width=window.innerWidth;
+  height=window.innerHeight;
+
+  canvas.width=width*dpr;
+  canvas.height=height*dpr;
+
+  canvas.style.width=width+"px";
+  canvas.style.height=height+"px";
+
+  ctx.setTransform(dpr,0,0,dpr,0,0);
 }
 
 function createParticles(){
   particles=[];
-  const count=Math.min(90,Math.floor(window.innerWidth/14));
+
+  const count=Math.min(
+    90,
+    Math.floor(window.innerWidth/14)
+  );
 
   for(let i=0;i<count;i++){
     particles.push({
@@ -873,30 +986,13 @@ function createParticles(){
   }
 }
 
-async function startMusic() {
-  try {
-    await bgMusic.play();
-    console.log("Music started.");
-  } catch (error) {
-    console.log("Autoplay was blocked. Waiting for user interaction.");
-  }
-}
-
-// Try immediately when the page loads.
-window.addEventListener("load", startMusic);
-
-// If the browser blocks autoplay, start on the first interaction.
-const startOnInteraction = () => {
-  startMusic();
-};
-
-document.addEventListener("click", startOnInteraction, { once: true });
-document.addEventListener("touchstart", startOnInteraction, { once: true });
-document.addEventListener("keydown", startOnInteraction, { once: true });
-</script>
-
 function animate(){
-  ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+  ctx.clearRect(
+    0,
+    0,
+    window.innerWidth,
+    window.innerHeight
+  );
 
   for(const p of particles){
     p.y-=p.speed;
@@ -907,59 +1003,106 @@ function animate(){
       p.x=Math.random()*window.innerWidth;
     }
 
-    if(p.x<-10)p.x=window.innerWidth+10;
-    if(p.x>window.innerWidth+10)p.x=-10;
+    if(p.x<-10){
+      p.x=window.innerWidth+10;
+    }
+
+    if(p.x>window.innerWidth+10){
+      p.x=-10;
+    }
 
     ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+    ctx.arc(
+      p.x,
+      p.y,
+      p.r,
+      0,
+      Math.PI*2
+    );
+
     ctx.fillStyle=`rgba(65,211,255,${p.alpha})`;
     ctx.shadowBlur=8;
     ctx.shadowColor="#18bfff";
+
     ctx.fill();
   }
 
   ctx.shadowBlur=0;
+
   requestAnimationFrame(animate);
 }
+
+bgMusic.volume=.35;
+
+async function startMusic(){
+  try{
+    await bgMusic.play();
+  }catch(error){}
+}
+
+window.addEventListener("load",startMusic);
+
+["click","touchstart","keydown","pointerdown"].forEach(event=>{
+  document.addEventListener(
+    event,
+    startMusic,
+    {once:true}
+  );
+});
 
 window.addEventListener("resize",()=>{
   resize();
   createParticles();
 });
 
-resize();
-createParticles();
-animate();
-
 document.querySelectorAll(".quick-btn").forEach(button=>{
   button.addEventListener("click",()=>{
     const target=document.getElementById(button.dataset.target);
-    if(target)target.scrollIntoView({behavior:"smooth",block:"start"});
+
+    if(target){
+      target.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+    }
   });
 });
 
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-},{threshold:.08});
+const observer=new IntersectionObserver(
+  entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold:.08
+  }
+);
 
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+document.querySelectorAll(".reveal").forEach(el=>{
+  observer.observe(el);
+});
 
 document.addEventListener("mousemove",e=>{
+  if(window.innerWidth<=700)return;
+
   const x=(e.clientX/window.innerWidth-.5)*2;
   const y=(e.clientY/window.innerHeight-.5)*2;
 
-  document.querySelectorAll(".panel,.rule,.status").forEach((el,i)=>{
-    if(window.innerWidth>700){
-      el.style.setProperty("--mx",`${x*2}px`);
-      el.style.setProperty("--my",`${y*2}px`);
-    }
+  document.querySelectorAll(".panel,.rule,.status").forEach(el=>{
+    el.style.setProperty("--mx",`${x*2}px`);
+    el.style.setProperty("--my",`${y*2}px`);
   });
 });
+
+resize();
+createParticles();
+animate();
 </script>
+
 </body>
 </html>
